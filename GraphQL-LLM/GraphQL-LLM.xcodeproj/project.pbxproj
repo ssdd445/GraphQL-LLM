@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		812CDE1F2E72710A00B8A4AD /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 812CDE1E2E72710A00B8A4AD /* Apollo */; };
+		B7FE86CB2E7295FB00C0652E /* List in Frameworks */ = {isa = PBXBuildFile; productRef = B7FE86CA2E7295FB00C0652E /* List */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +34,22 @@
 		812CDE0A2E72704000B8A4AD /* GraphQL-LLMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphQL-LLMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B70205C02E72832A0019B0E3 /* Exceptions for "GraphQL-LLM" folder in "GraphQL-LLM" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				List.graphql,
+			);
+			target = 812CDDF22E72703E00B8A4AD /* GraphQL-LLM */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		812CDDF52E72703E00B8A4AD /* GraphQL-LLM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B70205C02E72832A0019B0E3 /* Exceptions for "GraphQL-LLM" folder in "GraphQL-LLM" target */,
+			);
 			path = "GraphQL-LLM";
 			sourceTree = "<group>";
 		};
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FE86CB2E7295FB00C0652E /* List in Frameworks */,
 				812CDE1F2E72710A00B8A4AD /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +133,7 @@
 			name = "GraphQL-LLM";
 			packageProductDependencies = (
 				812CDE1E2E72710A00B8A4AD /* Apollo */,
+				B7FE86CA2E7295FB00C0652E /* List */,
 			);
 			productName = "GraphQL-LLM";
 			productReference = 812CDDF32E72703E00B8A4AD /* GraphQL-LLM.app */;
@@ -203,6 +219,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				812CDE1D2E72710A00B8A4AD /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				B7FE86C92E7295FB00C0652E /* XCLocalSwiftPackageReference "List" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 812CDDF42E72703E00B8A4AD /* Products */;
@@ -560,6 +577,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		B7FE86C92E7295FB00C0652E /* XCLocalSwiftPackageReference "List" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = List;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		812CDE1D2E72710A00B8A4AD /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -576,6 +600,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 812CDE1D2E72710A00B8A4AD /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		B7FE86CA2E7295FB00C0652E /* List */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = List;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
