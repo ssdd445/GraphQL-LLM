@@ -14,9 +14,11 @@ class CharacterListViewModel: ObservableObject {
     @Published var errorMessage: String?
     
     internal let networkService: NetworkServiceProtocol
+    internal let aiService: AIService
     
-    init(networkService: NetworkServiceProtocol) {
+    init(networkService: NetworkServiceProtocol, aiService: AIService) {
         self.networkService = networkService
+        self.aiService = aiService
     }
     
     func loadCharacters() async {

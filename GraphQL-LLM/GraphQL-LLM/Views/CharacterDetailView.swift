@@ -10,11 +10,16 @@ import SwiftUI
 struct CharacterDetailView: View {
     @StateObject private var viewModel: CharacterDetailViewModel
     
-    init(characterID: String, networkService: NetworkServiceProtocol) {
+    init(
+        characterID: String,
+        networkService: NetworkServiceProtocol,
+        aiService: AIService
+    ) {
         self._viewModel = StateObject(
             wrappedValue: CharacterDetailViewModel(
                 characterID: characterID,
-                networkService: networkService
+                networkService: networkService,
+                aiService: aiService
             )
         )
     }
@@ -40,7 +45,10 @@ struct CharacterDetailView: View {
                     }
                     .padding()
                 } else if let character = viewModel.character {
-                    CharacterDetailContentView(character: character)
+                    CharacterDetailContentView(
+                        character: character,
+                        aiService: viewModel.aiService
+                    )
                 } else {
                     Text("Character not found")
                         .foregroundColor(.secondary)

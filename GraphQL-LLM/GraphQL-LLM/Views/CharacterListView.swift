@@ -11,6 +11,7 @@ import SwiftUI
 struct CharacterListView: View {
     let characters: [CharactersListQuery.Data.Characters.Result]
     let networkService: NetworkServiceProtocol
+    let aiService: AIService
     
     var body: some View {
         List(characters, id: \.id) { character in
@@ -18,7 +19,8 @@ struct CharacterListView: View {
                 NavigationLink(
                     destination: CharacterDetailView(
                         characterID: characterId,
-                        networkService: networkService
+                        networkService: networkService,
+                        aiService: aiService
                     )
                 ) {
                     CharacterRowView(character: character)
