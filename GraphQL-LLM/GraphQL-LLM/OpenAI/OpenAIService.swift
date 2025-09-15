@@ -7,10 +7,9 @@
 import Foundation
 
 class OpenAIService: AIService {
-    private let apiKey: String = "AIzaSyAwPS6ElRUwaB4kqc4uhQ3QXFcEIbn9IMo"
-    
+    private let apiKey: String = ConfigService.shared.apiKey
     func generateFact(for person: String) async throws -> String {
-        let url = URL(string: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent")!
+        let url = ConfigService.shared.apiBaseURL
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

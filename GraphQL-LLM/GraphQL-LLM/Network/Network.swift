@@ -21,7 +21,7 @@ class NetworkService: NetworkServiceProtocol {
     }
     
     convenience init() {
-        let apollo = ApolloClient(url: URL(string: "https://rickandmortyapi.com/graphql")!)
+        let apollo = ApolloClient(url: ConfigService.shared.baseURL)
         self.init(apollo: apollo)
     }
     
