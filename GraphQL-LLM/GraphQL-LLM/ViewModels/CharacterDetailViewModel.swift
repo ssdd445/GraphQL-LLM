@@ -15,11 +15,17 @@ class CharacterDetailViewModel: ObservableObject {
     @Published var errorMessage: String?
     
     private let networkService: NetworkServiceProtocol
+    internal let aiService: AIService
     private let characterID: String
     
-    init(characterID: String, networkService: NetworkServiceProtocol) {
+    init(
+        characterID: String,
+        networkService: NetworkServiceProtocol,
+        aiService: AIService
+    ) {
         self.characterID = characterID
         self.networkService = networkService
+        self.aiService = aiService
     }
     
     func loadCharacterDetail() async {

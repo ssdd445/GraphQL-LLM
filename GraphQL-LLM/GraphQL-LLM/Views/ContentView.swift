@@ -12,8 +12,11 @@ import List
 struct ContentView: View {
     @StateObject private var viewModel: CharacterListViewModel
     
-    init(networkService: NetworkServiceProtocol = NetworkService()) {
-        self._viewModel = StateObject(wrappedValue: CharacterListViewModel(networkService: networkService))
+    init(
+        networkService: NetworkServiceProtocol = NetworkService(),
+        aiService: AIService = OpenAIService()
+    ) {
+        self._viewModel = StateObject(wrappedValue: CharacterListViewModel(networkService: networkService, aiService: aiService))
     }
     
     var body: some View {
@@ -38,7 +41,8 @@ struct ContentView: View {
                 } else {
                     CharacterListView(
                         characters: viewModel.characters,
-                        networkService: viewModel.networkService
+                        networkService: viewModel.networkService,
+                        aiService: viewModel.aiService
                     )
                 }
             }

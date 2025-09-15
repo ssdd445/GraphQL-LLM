@@ -22,6 +22,11 @@
 		B75342BB2E7404A60034E439 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75342BA2E7404A20034E439 /* CharacterListView.swift */; };
 		B75342BD2E7404C70034E439 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75342BC2E7404C60034E439 /* CharacterRowView.swift */; };
 		B75342BF2E7404FA0034E439 /* CharacterDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75342BE2E7404E40034E439 /* CharacterDetailRow.swift */; };
+		B7F5A6392E76FB9300979D78 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F5A6382E76FB8F00979D78 /* AIService.swift */; };
+		B7F5A63B2E7702C100979D78 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F5A63A2E7702B400979D78 /* OpenAIService.swift */; };
+		B7F5A63D2E77058500979D78 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F5A63C2E77058000979D78 /* Extensions.swift */; };
+		B7F5A6402E77C8EC00979D78 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F5A63F2E77C8EA00979D78 /* Response.swift */; };
+		B7F5A6422E77DBF200979D78 /* CharacterFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F5A6412E77DBF100979D78 /* CharacterFactViewModel.swift */; };
 		B7FE86CB2E7295FB00C0652E /* List in Frameworks */ = {isa = PBXBuildFile; productRef = B7FE86CA2E7295FB00C0652E /* List */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +66,12 @@
 		B75342BA2E7404A20034E439 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		B75342BC2E7404C60034E439 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
 		B75342BE2E7404E40034E439 /* CharacterDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRow.swift; sourceTree = "<group>"; };
+		B7F5A6382E76FB8F00979D78 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		B7F5A63A2E7702B400979D78 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		B7F5A63C2E77058000979D78 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B7F5A63E2E7715BD00979D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B7F5A63F2E77C8EA00979D78 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B7F5A6412E77DBF100979D78 /* CharacterFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFactViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -126,6 +137,8 @@
 		B75342A22E73FE020034E439 /* GraphQL-LLM */ = {
 			isa = PBXGroup;
 			children = (
+				B7F5A63E2E7715BD00979D78 /* Info.plist */,
+				B7F5A6372E76FB7A00979D78 /* OpenAI */,
 				B75342AF2E74034C0034E439 /* ViewModels */,
 				B75342AC2E7402FD0034E439 /* Network */,
 				B75342AB2E73FE440034E439 /* Utilities */,
@@ -163,6 +176,7 @@
 		B75342AB2E73FE440034E439 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B7F5A63C2E77058000979D78 /* Extensions.swift */,
 				B753429C2E73FE020034E439 /* Assets.xcassets */,
 			);
 			path = Utilities;
@@ -179,10 +193,21 @@
 		B75342AF2E74034C0034E439 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B7F5A6412E77DBF100979D78 /* CharacterFactViewModel.swift */,
 				B75342B22E7403850034E439 /* CharacterDetailViewModel.swift */,
 				B75342B02E7403570034E439 /* CharacterListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B7F5A6372E76FB7A00979D78 /* OpenAI */ = {
+			isa = PBXGroup;
+			children = (
+				B7F5A63F2E77C8EA00979D78 /* Response.swift */,
+				B7F5A63A2E7702B400979D78 /* OpenAIService.swift */,
+				B7F5A6382E76FB8F00979D78 /* AIService.swift */,
+			);
+			path = OpenAI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,7 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B75342B52E7404090034E439 /* CharacterImageView.swift in Sources */,
+				B7F5A6392E76FB9300979D78 /* AIService.swift in Sources */,
+				B7F5A63B2E7702C100979D78 /* OpenAIService.swift in Sources */,
 				B75342BF2E7404FA0034E439 /* CharacterDetailRow.swift in Sources */,
+				B7F5A6402E77C8EC00979D78 /* Response.swift in Sources */,
 				B75342B12E74035C0034E439 /* CharacterListViewModel.swift in Sources */,
 				B75342B92E7404520034E439 /* CharacterDetailContentView.swift in Sources */,
 				B75342BB2E7404A60034E439 /* CharacterListView.swift in Sources */,
@@ -346,6 +374,8 @@
 				B75342A42E73FE020034E439 /* GraphQL_LLMApp.swift in Sources */,
 				B75342AE2E74030A0034E439 /* Network.swift in Sources */,
 				B75342BD2E7404C70034E439 /* CharacterRowView.swift in Sources */,
+				B7F5A6422E77DBF200979D78 /* CharacterFactViewModel.swift in Sources */,
+				B7F5A63D2E77058500979D78 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +537,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GraphQL-LLM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -534,6 +565,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GraphQL-LLM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
